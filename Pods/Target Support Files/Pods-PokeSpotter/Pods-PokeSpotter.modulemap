@@ -1,0 +1,6 @@
+framework module Pods_PokeSpotter {
+  umbrella header "Pods-PokeSpotter-umbrella.h"
+
+  export *
+  module * { export * }
+}
