@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import FirebaseDatabase
 
 class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
 
@@ -20,6 +21,10 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     //State of the centering map
     var mapHasCenteredOnce = false
     
+    //GeoFire object and reference
+    var geoFire: GeoFire!
+    var geoFireRef: FIRDatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -28,6 +33,10 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         
         //Track the user based on their location
         mapView.userTrackingMode = MKUserTrackingMode.follow
+        
+        //Reference to the Firebase Database and initialize geoFire
+        geoFireRef = FIRDatabase.database().reference()
+        geoFire = GeoFire(firebaseRef: geoFireRef)
 
     }
     
@@ -88,6 +97,11 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         }
         
         return annotationView
+    }
+    
+    //Function to call when a Pokemon is spotted
+    func spottedPokemon(forLocation location: CLLocation, withPokemon pokeID: Int) {
+        geoFire.setLocation(location, forKey: "\(pokeID)")
     }
     
     //Tap when you see a pokemon
