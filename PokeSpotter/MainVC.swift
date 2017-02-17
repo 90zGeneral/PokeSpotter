@@ -104,10 +104,35 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         geoFire.setLocation(location, forKey: "\(pokeID)")
     }
     
-    //Tap when you see a pokemon
+    //Show the sighting of pokemons on the map
+    func showSightingsOnMap(location: CLLocation) {
+        let circleQuery = geoFire.query(at: location, withRadius: 2.5)
+        _ = circleQuery?.observe(GFEventType.keyEntered, with: { (key, location) in
+            
+            //Make sure both key and location exist
+            if let key = key, let location = location {
+                
+                //New Instance of Annotation
+                let newAnno = PokeAnnotation(coordinate: location.coordinate, pokemonID: Int(key)!)
+                self.mapView.addAnnotation(newAnno)
+            }
+        })
+    }
+    
+    //Tap to see a random pokemon in the center of the map
     @IBAction func pokemonSpotted(_ sender: Any) {
+        
+        //Create a location for random pokemon
+        let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
+        
+        //Random pokemon ID generator
+        let rand = arc4random_uniform(151) + 1
+        
+        //Call spottedPokemon using the values above
+        spottedPokemon(forLocation: loc, withPokemon: Int(rand))
         
     }
 
 }
+
 

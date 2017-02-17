@@ -19,6 +19,7 @@
 		D506BFE81E52622D0030870B /* GFGeoHash.m in Sources */ = {isa = PBXBuildFile; fileRef = D506BFE11E52622D0030870B /* GFGeoHash.m */; };
 		D506BFE91E52622D0030870B /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D506BFE31E52622D0030870B /* GFGeoHashQuery.m */; };
 		D506BFEA1E52622D0030870B /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D506BFE51E52622D0030870B /* GFQuery.m */; };
+		D506BFED1E54DBD60030870B /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506BFEC1E54DBD60030870B /* PokeAnnotation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +50,7 @@
 		D506BFE41E52622D0030870B /* GFQuery+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GFQuery+Private.h"; sourceTree = "<group>"; };
 		D506BFE51E52622D0030870B /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
 		D506BFEB1E5263D80030870B /* PokeSpotter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PokeSpotter-Bridging-Header.h"; sourceTree = "<group>"; };
+		D506BFEC1E54DBD60030870B /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +132,7 @@
 		D506BFD01E525C540030870B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D506BFEC1E54DBD60030870B /* PokeAnnotation.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -310,6 +313,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D506BFE71E52622D0030870B /* GFBase32Utils.m in Sources */,
+				D506BFED1E54DBD60030870B /* PokeAnnotation.swift in Sources */,
 				D506BFBF1E525B0D0030870B /* MainVC.swift in Sources */,
 				D506BFE81E52622D0030870B /* GFGeoHash.m in Sources */,
 				D506BFBD1E525B0D0030870B /* AppDelegate.swift in Sources */,
