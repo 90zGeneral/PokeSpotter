@@ -6,8 +6,10 @@
 //  Copyright © 2017 Italyte. All rights reserved.
 //
 
+import Foundation
 import UIKit
 import MapKit
+import CoreLocation
 import FirebaseDatabase
 
 class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
@@ -46,7 +48,7 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         userLocationAuthStatus()
     }
     
-    //Get the user's permission to access their location 
+    //Ask the user's permission to access their location
     func userLocationAuthStatus() {
         
         if CLLocationManager.authorizationStatus() == .authorizedWhenInUse {
@@ -64,7 +66,7 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         }
     }
     
-    //Re-center the map to the user's current location after the user zoom or pan on the map
+    //Center the map on the user's location
     func mapCenteredOnUserLocation(location: CLLocation) {
         let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate, 2000, 2000)
         
@@ -110,16 +112,15 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         }
         
         //To customize the annotation with pokemon image regardless of which condition case fall thru
-        if let annotateView = annotationView, let anno = annotation as? PokeAnnotation {
-            annotateView.canShowCallout = true
-            annotateView.image = UIImage(named: "\(anno.pokemonID)")
+        if let annotationView = annotationView, let anno = annotation as? PokeAnnotation {
+            annotationView.canShowCallout = true
+            annotationView.image = UIImage(named: "\(anno.pokemonID)")
             
-            //Create a button
+            //Create a button then set it to the annotationView
             let btn = UIButton()
             btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
             btn.setImage(UIImage(named: "map"), for: .normal)
-            
-            annotateView.rightCalloutAccessoryView = btn
+            annotationView.rightCalloutAccessoryView = btn
         }
         
         return annotationView
@@ -127,12 +128,16 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     //Function to call when a Pokemon is spotted
     func spottedPokemon(forLocation location: CLLocation, withPokemon pokeID: Int) {
+        
+        //Store location in Firebase
         geoFire.setLocation(location, forKey: "\(pokeID)")
     }
     
     //Show the sighting of pokemons on the map
     func showSightingsOnMap(location: CLLocation) {
-        let circleQuery = geoFire.query(at: location, withRadius: 2.5)
+        let circleQuery = geoFire.query(at: location, withRadius: 2.0)
+        
+        //Firebase call back function executes whenever a location is set from the spottedPokemon method
         _ = circleQuery?.observe(GFEventType.keyEntered, with: { (key, location) in
             
             //Make sure both key and location exist
@@ -141,6 +146,7 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
                 //New Instance of Annotation
                 let newAnno = PokeAnnotation(coordinate: location.coordinate, pokemonID: Int(key)!)
                 self.mapView.addAnnotation(newAnno)
+
             }
         })
     }
@@ -155,17 +161,17 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         showSightingsOnMap(location: loc)
     }
     
-    //To handle the functionalities when the user taps a pokemon and the button for the map
+    //To get the directions to a Pokemon when the user taps on the map within the pop-up of a pokemon annotation image 
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
         if let anno = view.annotation as? PokeAnnotation {
             let place = MKPlacemark(coordinate: anno.coordinate)
             let destination = MKMapItem(placemark: place)
-            destination.name = "Pokemon Sighting"
-            let regionDistance: CLLocationDistance = 1000
+            destination.name = "\(anno.pokemonName)'s Location"
+            let regionDistance: CLLocationDistance = 700
             let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regionDistance, regionDistance)
             
-            let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span), MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving] as [String : Any]
+            let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span), MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving] as [String: Any]
             
             MKMapItem.openMaps(with: [destination], launchOptions: options)
         }
@@ -177,7 +183,7 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         //Create a location for random pokemon
         let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
         
-        //Random pokemon ID generator
+        //Random pokemon ID generator between 1 and 151 inclusive of both 1 & 151
         let rand = arc4random_uniform(151) + 1
         
         //Call spottedPokemon using the values above
