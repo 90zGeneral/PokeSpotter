@@ -6,10 +6,8 @@
 //  Copyright © 2017 Italyte. All rights reserved.
 //
 
-import Foundation
 import UIKit
 import MapKit
-import CoreLocation
 import FirebaseDatabase
 
 class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
