@@ -188,7 +188,18 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         spottedPokemon(forLocation: loc, withPokemon: Int(rand))
         
     }
+    
+    //To re-center the map on the user's current location after zooming, panning or scrolling
+    @IBAction func goBackToCurrentLocation(_ sender: Any) {
+        
+        //Get the user's current latitude and longitude location
+        let relocate = CLLocation(latitude: mapView.userLocation.coordinate.latitude, longitude: mapView.userLocation.coordinate.longitude)
+        
+        //Function call
+        mapCenteredOnUserLocation(location: relocate)
+    }
 
 }
+
 
 

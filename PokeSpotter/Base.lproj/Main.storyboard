@@ -36,6 +36,17 @@
                                     <action selector="pokemonSpotted:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KIS-ET-HvY"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kab-dc-BTi">
+                                <rect key="frame" x="16" y="428" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="QPB-TY-tcS"/>
+                                    <constraint firstAttribute="width" constant="50" id="f9F-wu-laT"/>
+                                </constraints>
+                                <state key="normal" image="currentLocation"/>
+                                <connections>
+                                    <action selector="goBackToCurrentLocation:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Yzt-Ic-zy6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -43,8 +54,10 @@
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="VQ5-I3-TWH" secondAttribute="bottom" id="2vt-fV-gT5"/>
                             <constraint firstItem="VQ5-I3-TWH" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="BlG-jV-oxS"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Mke-yi-SFG" secondAttribute="bottom" constant="10" id="GOV-Pd-vhK"/>
+                            <constraint firstItem="Kab-dc-BTi" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="LVM-QL-5ZI"/>
                             <constraint firstAttribute="trailing" secondItem="VQ5-I3-TWH" secondAttribute="trailing" id="aMG-Ql-bAk"/>
                             <constraint firstItem="VQ5-I3-TWH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ssn-U5-zBr"/>
+                            <constraint firstItem="Mke-yi-SFG" firstAttribute="top" secondItem="Kab-dc-BTi" secondAttribute="bottom" constant="30" id="tdB-JW-Ujn"/>
                         </constraints>
                     </view>
                     <connections>
@@ -57,6 +70,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="currentLocation" width="200" height="200"/>
         <image name="pokeball" width="97" height="96"/>
     </resources>
 </document>
