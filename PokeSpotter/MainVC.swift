@@ -114,11 +114,17 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
             annotationView.canShowCallout = true
             annotationView.image = UIImage(named: "\(anno.pokemonID)")
             
-            //Create a button then set it to the annotationView
-            let btn = UIButton()
-            btn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
-            btn.setImage(UIImage(named: "map"), for: .normal)
-            annotationView.rightCalloutAccessoryView = btn
+            //Create a right button that redirects and opens apple map with the directions to the pokemon from user's location.
+            let rightBtn = UIButton()
+            rightBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+            rightBtn.setImage(UIImage(named: "map"), for: .normal)
+            annotationView.rightCalloutAccessoryView = rightBtn
+            
+            //Create a left button that opens a presentationController with facts about the pokemon.
+            let leftBtn = UIButton()
+            leftBtn.frame = CGRect(x: 0, y: 0, width: 30, height: 30)
+            leftBtn.setImage(UIImage(named: "facts"), for: .normal)
+            annotationView.leftCalloutAccessoryView = leftBtn
         }
         
         return annotationView
