@@ -20,12 +20,46 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="World_map_black" translatesAutoresizingMaskIntoConstraints="NO" id="yVp-kp-bAK">
+                                <rect key="frame" x="-14" y="118" width="348" height="450"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="DetectivePikachu2" translatesAutoresizingMaskIntoConstraints="NO" id="yiI-YZ-ZGb">
+                                <rect key="frame" x="43" y="218" width="235" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="250" id="MgI-x1-r0d"/>
+                                    <constraint firstAttribute="width" constant="235" id="j89-6E-Mlp"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="PokeSpotter (1)" translatesAutoresizingMaskIntoConstraints="NO" id="S6h-3M-KyE">
+                                <rect key="frame" x="0.0" y="20" width="320" height="90"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="90" id="ts5-Sj-uol"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.40000000600000002" green="0.80000001190000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="S6h-3M-KyE" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" id="42N-s8-Ts3"/>
+                            <constraint firstItem="yVp-kp-bAK" firstAttribute="top" secondItem="S6h-3M-KyE" secondAttribute="bottom" constant="8" id="Fhx-Fv-sMZ"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="yVp-kp-bAK" secondAttribute="bottom" id="Saf-YI-QDV"/>
+                            <constraint firstItem="yVp-kp-bAK" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-14" id="Uim-wz-dGC"/>
+                            <constraint firstItem="S6h-3M-KyE" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ZwC-g4-q6h"/>
+                            <constraint firstItem="yiI-YZ-ZGb" firstAttribute="centerX" secondItem="yVp-kp-bAK" secondAttribute="centerX" id="jMI-XZ-YH9"/>
+                            <constraint firstAttribute="trailing" secondItem="yVp-kp-bAK" secondAttribute="trailing" constant="-14" id="lAj-xK-9Uf"/>
+                            <constraint firstItem="yiI-YZ-ZGb" firstAttribute="centerY" secondItem="yVp-kp-bAK" secondAttribute="centerY" id="nOW-eS-CVr"/>
+                            <constraint firstAttribute="trailing" secondItem="S6h-3M-KyE" secondAttribute="trailing" id="pJL-lO-j1e"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.5" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="DetectivePikachu2" width="235" height="250"/>
+        <image name="PokeSpotter (1)" width="480" height="141"/>
+        <image name="World_map_black" width="1600" height="833"/>
+    </resources>
 </document>
