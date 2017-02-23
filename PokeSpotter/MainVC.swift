@@ -165,19 +165,29 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         showSightingsOnMap(location: loc)
     }
     
-    //To get the directions to a Pokemon when the user taps on the map within the pop-up of a pokemon annotation image 
+    //To control the left and right callout buttons of a pokemon annotation
     func mapView(_ mapView: MKMapView, annotationView view: MKAnnotationView, calloutAccessoryControlTapped control: UIControl) {
         
-        if let anno = view.annotation as? PokeAnnotation {
-            let place = MKPlacemark(coordinate: anno.coordinate)
-            let destination = MKMapItem(placemark: place)
-            destination.name = "\(anno.pokemonName)'s Location"
-            let regionDistance: CLLocationDistance = 700
-            let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regionDistance, regionDistance)
+        //Check which callout button was tapped
+        if control == view.leftCalloutAccessoryView {
             
-            let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span), MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving] as [String: Any]
+            print("Workinggggggggg")
             
-            MKMapItem.openMaps(with: [destination], launchOptions: options)
+        }else if control == view.rightCalloutAccessoryView {
+            
+            //Use the pokemon's coordinations as a placemark for the destination
+            if let anno = view.annotation as? PokeAnnotation {
+                let place = MKPlacemark(coordinate: anno.coordinate)
+                let destination = MKMapItem(placemark: place)
+                destination.name = "\(anno.title)'s Location"
+                let regionDistance: CLLocationDistance = 700
+                let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regionDistance, regionDistance)
+                
+                let options = [MKLaunchOptionsMapCenterKey: NSValue(mkCoordinate: regionSpan.center), MKLaunchOptionsMapSpanKey: NSValue(mkCoordinateSpan: regionSpan.span), MKLaunchOptionsDirectionsModeKey: MKLaunchOptionsDirectionsModeDriving] as [String: Any]
+                
+                //Open Apple Maps with navigation to the pokemon
+                MKMapItem.openMaps(with: [destination], launchOptions: options)
+            }
         }
     }
     
