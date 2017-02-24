@@ -20,6 +20,8 @@
 		D506BFE91E52622D0030870B /* GFGeoHashQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D506BFE31E52622D0030870B /* GFGeoHashQuery.m */; };
 		D506BFEA1E52622D0030870B /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D506BFE51E52622D0030870B /* GFQuery.m */; };
 		D506BFED1E54DBD60030870B /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506BFEC1E54DBD60030870B /* PokeAnnotation.swift */; };
+		D506C0101E5FBFB80030870B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506C00F1E5FBFB70030870B /* Constants.swift */; };
+		D5DB3AAA1E5FC40F00971C5C /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB3AA91E5FC40F00971C5C /* Pokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -51,6 +53,8 @@
 		D506BFE51E52622D0030870B /* GFQuery.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GFQuery.m; sourceTree = "<group>"; };
 		D506BFEB1E5263D80030870B /* PokeSpotter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PokeSpotter-Bridging-Header.h"; sourceTree = "<group>"; };
 		D506BFEC1E54DBD60030870B /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
+		D506C00F1E5FBFB70030870B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D5DB3AA91E5FC40F00971C5C /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				D506BFEC1E54DBD60030870B /* PokeAnnotation.swift */,
+				D5DB3AA91E5FC40F00971C5C /* Pokemon.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -145,6 +150,7 @@
 				D506BFC31E525B0D0030870B /* Assets.xcassets */,
 				D506BFD21E525D590030870B /* GoogleService-Info.plist */,
 				D506BFC81E525B0D0030870B /* Info.plist */,
+				D506C00F1E5FBFB70030870B /* Constants.swift */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -317,9 +323,11 @@
 				D506BFBF1E525B0D0030870B /* MainVC.swift in Sources */,
 				D506BFE81E52622D0030870B /* GFGeoHash.m in Sources */,
 				D506BFBD1E525B0D0030870B /* AppDelegate.swift in Sources */,
+				D5DB3AAA1E5FC40F00971C5C /* Pokemon.swift in Sources */,
 				D506BFE61E52622D0030870B /* GeoFire.m in Sources */,
 				D506BFE91E52622D0030870B /* GFGeoHashQuery.m in Sources */,
 				D506BFEA1E52622D0030870B /* GFQuery.m in Sources */,
+				D506C0101E5FBFB80030870B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

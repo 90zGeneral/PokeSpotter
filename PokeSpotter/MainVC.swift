@@ -179,7 +179,7 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
             if let anno = view.annotation as? PokeAnnotation {
                 let place = MKPlacemark(coordinate: anno.coordinate)
                 let destination = MKMapItem(placemark: place)
-                destination.name = "\(anno.title)'s Location"
+                destination.name = "\(anno.title!)'s Location"
                 let regionDistance: CLLocationDistance = 700
                 let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regionDistance, regionDistance)
                 
