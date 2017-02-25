@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		972CD7D8E6E8160FB6137E59 /* Pods_PokeSpotter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51ECCA05AE12DD615C5A8AE2 /* Pods_PokeSpotter.framework */; };
+		D5030F251E612574003A73F4 /* PokemonFactsPC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5030F241E612574003A73F4 /* PokemonFactsPC.swift */; };
 		D506BFBD1E525B0D0030870B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506BFBC1E525B0D0030870B /* AppDelegate.swift */; };
 		D506BFBF1E525B0D0030870B /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506BFBE1E525B0D0030870B /* MainVC.swift */; };
 		D506BFC21E525B0D0030870B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D506BFC01E525B0D0030870B /* Main.storyboard */; };
@@ -28,6 +29,7 @@
 		05D919C754700F36595C129B /* Pods-PokeSpotter.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSpotter.release.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSpotter/Pods-PokeSpotter.release.xcconfig"; sourceTree = "<group>"; };
 		51ECCA05AE12DD615C5A8AE2 /* Pods_PokeSpotter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PokeSpotter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A674E48415960EDBE636969 /* Pods-PokeSpotter.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PokeSpotter.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PokeSpotter/Pods-PokeSpotter.debug.xcconfig"; sourceTree = "<group>"; };
+		D5030F241E612574003A73F4 /* PokemonFactsPC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonFactsPC.swift; sourceTree = "<group>"; };
 		D506BFB91E525B0D0030870B /* PokeSpotter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PokeSpotter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D506BFBC1E525B0D0030870B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D506BFBE1E525B0D0030870B /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
@@ -129,6 +131,7 @@
 			isa = PBXGroup;
 			children = (
 				D506BFBE1E525B0D0030870B /* MainVC.swift */,
+				D5030F241E612574003A73F4 /* PokemonFactsPC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -328,6 +331,7 @@
 				D506BFE91E52622D0030870B /* GFGeoHashQuery.m in Sources */,
 				D506BFEA1E52622D0030870B /* GFQuery.m in Sources */,
 				D506C0101E5FBFB80030870B /* Constants.swift in Sources */,
+				D5030F251E612574003A73F4 /* PokemonFactsPC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
