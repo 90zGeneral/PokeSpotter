@@ -9,5 +9,8 @@
 import UIKit
 
 class PokemonFactsPC: UIPresentationController {
+    
+    //Outlets
+    @IBOutlet weak var 
 
 }
