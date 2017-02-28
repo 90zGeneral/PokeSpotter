@@ -179,7 +179,19 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
             if let anno = view.annotation as? PokeAnnotation {
                 let place = MKPlacemark(coordinate: anno.coordinate)
                 let destination = MKMapItem(placemark: place)
-                destination.name = "\(anno.title!)'s Location"
+                let nameTitle = "\(anno.title!)'s Location"
+                
+                let text = nameTitle
+                let linkTextWithColor = text
+                
+                let range = (text as NSString).range(of: linkTextWithColor)
+                
+                let attributedString = NSMutableAttributedString(string:text)
+                attributedString.addAttribute(NSForegroundColorAttributeName, value: UIColor.red , range: range)
+                
+                destination.name = String(describing: attributedString)
+                
+                
                 let regionDistance: CLLocationDistance = 700
                 let regionSpan = MKCoordinateRegionMakeWithDistance(anno.coordinate, regionDistance, regionDistance)
                 
