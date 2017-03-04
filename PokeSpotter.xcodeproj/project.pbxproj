@@ -21,6 +21,7 @@
 		D506BFEA1E52622D0030870B /* GFQuery.m in Sources */ = {isa = PBXBuildFile; fileRef = D506BFE51E52622D0030870B /* GFQuery.m */; };
 		D506BFED1E54DBD60030870B /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506BFEC1E54DBD60030870B /* PokeAnnotation.swift */; };
 		D506C0101E5FBFB80030870B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506C00F1E5FBFB70030870B /* Constants.swift */; };
+		D551501B1E6A77FB0048E97B /* Main2.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D551501A1E6A77FB0048E97B /* Main2.storyboard */; };
 		D5DB3AAA1E5FC40F00971C5C /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB3AA91E5FC40F00971C5C /* Pokemon.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		D506BFEB1E5263D80030870B /* PokeSpotter-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "PokeSpotter-Bridging-Header.h"; sourceTree = "<group>"; };
 		D506BFEC1E54DBD60030870B /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
 		D506C00F1E5FBFB70030870B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		D551501A1E6A77FB0048E97B /* Main2.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main2.storyboard; sourceTree = "<group>"; };
 		D5DB3AA91E5FC40F00971C5C /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -119,6 +121,7 @@
 		D506BFCE1E525C210030870B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D551501A1E6A77FB0048E97B /* Main2.storyboard */,
 				D506BFC01E525B0D0030870B /* Main.storyboard */,
 				D506BFC51E525B0D0030870B /* LaunchScreen.storyboard */,
 			);
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D506BFC71E525B0D0030870B /* LaunchScreen.storyboard in Resources */,
+				D551501B1E6A77FB0048E97B /* Main2.storyboard in Resources */,
 				D506BFD31E525D590030870B /* GoogleService-Info.plist in Resources */,
 				D506BFC41E525B0D0030870B /* Assets.xcassets in Resources */,
 				D506BFC21E525B0D0030870B /* Main.storyboard in Resources */,
