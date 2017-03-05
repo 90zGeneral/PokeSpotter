@@ -213,24 +213,13 @@
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="ODb-Po-c1N">
-                                <rect key="frame" x="16" y="80" width="288" height="267"/>
+                                <rect key="frame" x="16" y="80" width="288" height="224"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="viV-60-e3s">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="163"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="120"/>
                                         <subviews>
-                                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="B3M-Z0-t7t">
-                                                <rect key="frame" x="0.0" y="0.0" width="288" height="29"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="height" constant="28" id="B8k-ql-8tj"/>
-                                                </constraints>
-                                                <segments>
-                                                    <segment title="Bio"/>
-                                                    <segment title="Moves"/>
-                                                </segments>
-                                                <color key="tintColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </segmentedControl>
                                             <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tmF-vW-UvG">
-                                                <rect key="frame" x="0.0" y="43" width="288" height="120"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="288" height="120"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Tb-1N-2dC">
                                                         <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
@@ -250,13 +239,11 @@
                                         </subviews>
                                         <constraints>
                                             <constraint firstItem="tmF-vW-UvG" firstAttribute="leading" secondItem="viV-60-e3s" secondAttribute="leading" id="2Tz-dR-PaC"/>
-                                            <constraint firstItem="B3M-Z0-t7t" firstAttribute="leading" secondItem="viV-60-e3s" secondAttribute="leading" id="Xj2-2D-pmk"/>
-                                            <constraint firstAttribute="trailing" secondItem="B3M-Z0-t7t" secondAttribute="trailing" id="f93-wD-454"/>
                                             <constraint firstAttribute="trailing" secondItem="tmF-vW-UvG" secondAttribute="trailing" id="h2x-1c-F86"/>
                                         </constraints>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="aK8-tf-pqU">
-                                        <rect key="frame" x="0.0" y="178" width="288" height="89"/>
+                                        <rect key="frame" x="0.0" y="135" width="288" height="89"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" translatesAutoresizingMaskIntoConstraints="NO" id="7Lg-np-4ha">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="21"/>
@@ -408,7 +395,7 @@
                                 </constraints>
                             </stackView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GxQ-hN-Qec">
-                                <rect key="frame" x="0.0" y="364" width="320" height="30"/>
+                                <rect key="frame" x="0.0" y="354" width="320" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbf-NO-fYh">
                                         <rect key="frame" x="0.0" y="5" width="320" height="21"/>
@@ -471,7 +458,7 @@
                             <constraint firstItem="hnX-bD-IgA" firstAttribute="top" secondItem="Qno-I3-y5G" secondAttribute="bottom" constant="20" id="ExK-Oo-3dA"/>
                             <constraint firstItem="Qno-I3-y5G" firstAttribute="leading" secondItem="3cv-lZ-2Kb" secondAttribute="leadingMargin" id="J1t-I4-L8w"/>
                             <constraint firstItem="ODb-Po-c1N" firstAttribute="top" secondItem="KV4-md-i7c" secondAttribute="bottom" constant="15" id="JCB-2L-c27"/>
-                            <constraint firstItem="Qno-I3-y5G" firstAttribute="top" secondItem="GxQ-hN-Qec" secondAttribute="bottom" constant="15" id="Otq-DS-TCf"/>
+                            <constraint firstItem="Qno-I3-y5G" firstAttribute="top" secondItem="GxQ-hN-Qec" secondAttribute="bottom" constant="25" id="Otq-DS-TCf"/>
                             <constraint firstItem="KV4-md-i7c" firstAttribute="top" secondItem="3cv-lZ-2Kb" secondAttribute="top" id="W0E-3p-BPp"/>
                             <constraint firstItem="ODb-Po-c1N" firstAttribute="leading" secondItem="3cv-lZ-2Kb" secondAttribute="leadingMargin" id="Wxe-fx-Qgj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qno-I3-y5G" secondAttribute="trailing" id="YHu-J0-uo7"/>
@@ -501,7 +488,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="k0Z-Qh-hDK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="874" y="135"/>
+            <point key="canvasLocation" x="887" y="135"/>
         </scene>
     </scenes>
     <resources>
