@@ -15,10 +15,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--MainVC-->
+        <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="PokeSpotter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="GLKViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -165,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="138.75" y="135.21126760563379"/>
         </scene>
-        <!--Pokemon DetailsVC-->
+        <!--MainVC-->
         <scene sceneID="Sub-vO-Xdj">
             <objects>
-                <viewController id="elK-dO-CQK" customClass="PokemonDetailsVC" customModule="PokeSpotter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="elK-dO-CQK" customClass="MainVC" customModule="PokeSpotter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ezm-Je-rmP"/>
                         <viewControllerLayoutGuide type="bottom" id="hnX-bD-IgA"/>

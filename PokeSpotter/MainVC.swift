@@ -171,7 +171,9 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         //Check which callout button was tapped
         if control == view.leftCalloutAccessoryView {
             
-            print("Workinggggggggg")
+            let pokemonSent = "Pokemon"
+            
+            performSegue(withIdentifier: "PokeDetails", sender: pokemonSent)
             
         }else if control == view.rightCalloutAccessoryView {
             
@@ -190,6 +192,14 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
                 MKMapItem.openMaps(with: [destination], launchOptions: options)
             }
         }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let destination = segue.destination as? PokeDetailsVC
+        let myString = sender as? String
+        
+        destination?.stringy = myString!
+        
     }
     
     //Tap to see a random pokemon in the center of the map
