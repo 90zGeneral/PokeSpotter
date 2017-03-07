@@ -9,27 +9,24 @@
 import UIKit
 
 class PokeDetailsVC: UIViewController {
+
+    //Outlets
+    @IBOutlet weak var pokeName: UILabel!
+    @IBOutlet weak var mainImg: UIImageView!
+    
+    //New instance of PokeAnnotation without initialization
+    var pokemonAnn: PokeAnnotation!
     
     //ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        myString.text = stringy
-        
-    }
+        //Assignment
+        pokeName.text = pokemonAnn.title
 
-    //Outlets
-    @IBOutlet weak var myString: UILabel!
-    
-    private var _stringy: String!
-    
-    //Getter
-    var stringy: String {
-        get {
-            return _stringy
-        }set {
-            _stringy = newValue
-        }
+        let img = UIImage(named: "\(pokemonAnn.pokemonID)")
+        mainImg.image = img
+        
     }
     
     //To go back to the mainVC

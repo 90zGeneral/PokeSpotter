@@ -372,7 +372,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="myString" destination="IKK-eR-TMh" id="8Cv-yw-M0C"/>
+                        <outlet property="mainImg" destination="xnK-WK-Z9y" id="xYj-1m-R6k"/>
+                        <outlet property="pokeName" destination="IKK-eR-TMh" id="gYK-K1-yqn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ez-ee-7UB" userLabel="First Responder" sceneMemberID="firstResponder"/>

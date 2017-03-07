@@ -171,14 +171,11 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         //Check which callout button was tapped
         if control == view.leftCalloutAccessoryView {
             
-            var pokemonSent: String!
+            var pokeAnnotation: PokeAnnotation!
             
-            if let anno = view.annotation as? PokeAnnotation {
-                
-                pokemonSent = anno.title
-            }
+            pokeAnnotation = view.annotation as? PokeAnnotation
             
-            performSegue(withIdentifier: "PokeDetails", sender: pokemonSent)
+            performSegue(withIdentifier: "PokeDetails", sender: pokeAnnotation)
             
         }else if control == view.rightCalloutAccessoryView {
             
@@ -201,9 +198,9 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let destination = segue.destination as? PokeDetailsVC
-        let myString = sender as? String
+        let myAnno = sender as? PokeAnnotation
         
-        destination?.stringy = myString!
+        destination?.pokemonAnn = myAnno
         
     }
     
