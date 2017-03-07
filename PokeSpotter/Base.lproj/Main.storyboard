@@ -100,6 +100,10 @@
                                             <constraint firstAttribute="width" constant="35" id="EMb-mm-6OR"/>
                                             <constraint firstAttribute="height" constant="20" id="avU-W5-C4K"/>
                                         </constraints>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="goBack:" destination="ukL-pY-mrc" eventType="touchUpInside" id="dA5-PM-h7q"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -377,6 +381,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="back" width="100" height="67"/>
         <image name="currentLocation" width="200" height="200"/>
         <image name="pokeball" width="97" height="96"/>
     </resources>

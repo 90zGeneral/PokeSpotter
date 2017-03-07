@@ -9,11 +9,21 @@
 import UIKit
 
 class PokeDetailsVC: UIViewController {
+    
+    //ViewDidLoad
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        myString.text = stringy
+        
+    }
 
+    //Outlets
     @IBOutlet weak var myString: UILabel!
     
     private var _stringy: String!
     
+    //Getter
     var stringy: String {
         get {
             return _stringy
@@ -22,11 +32,11 @@ class PokeDetailsVC: UIViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    //To go back to the mainVC
+    @IBAction func goBack(_ sender: Any) {
         
-        myString.text = stringy
-
+        dismiss(animated: true, completion: nil)
+        
     }
 
 }

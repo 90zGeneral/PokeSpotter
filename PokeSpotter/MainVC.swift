@@ -171,7 +171,12 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         //Check which callout button was tapped
         if control == view.leftCalloutAccessoryView {
             
-            let pokemonSent = "Pokemon"
+            var pokemonSent: String!
+            
+            if let anno = view.annotation as? PokeAnnotation {
+                
+                pokemonSent = anno.title
+            }
             
             performSegue(withIdentifier: "PokeDetails", sender: pokemonSent)
             
