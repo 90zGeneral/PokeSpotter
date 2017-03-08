@@ -96,6 +96,7 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         if annotation.isKind(of: MKUserLocation.self) {
             annotationView = MKAnnotationView(annotation: annotation, reuseIdentifier: "User")
             annotationView.image = UIImage(named: "ash")
+            annotationView.canShowCallout = true
             
         }else if let dequeueAnno = mapView.dequeueReusableAnnotationView(withIdentifier: annoIdentifier) {
             //To reuse custom annotation if needed
