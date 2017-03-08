@@ -22,6 +22,7 @@
 		D506BFED1E54DBD60030870B /* PokeAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506BFEC1E54DBD60030870B /* PokeAnnotation.swift */; };
 		D506C0101E5FBFB80030870B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = D506C00F1E5FBFB70030870B /* Constants.swift */; };
 		D522E7761E70B247007E8FA0 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = D522E7751E70B247007E8FA0 /* pokemon.csv */; };
+		D522E7781E70C3C4007E8FA0 /* music.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D522E7771E70C3C4007E8FA0 /* music.mp3 */; };
 		D551501D1E6DDC850048E97B /* PokeDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D551501C1E6DDC850048E97B /* PokeDetailsVC.swift */; };
 		D5DB3AAA1E5FC40F00971C5C /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = D5DB3AA91E5FC40F00971C5C /* Pokemon.swift */; };
 /* End PBXBuildFile section */
@@ -57,6 +58,7 @@
 		D506BFEC1E54DBD60030870B /* PokeAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeAnnotation.swift; sourceTree = "<group>"; };
 		D506C00F1E5FBFB70030870B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		D522E7751E70B247007E8FA0 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
+		D522E7771E70C3C4007E8FA0 /* music.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = music.mp3; sourceTree = "<group>"; };
 		D551501C1E6DDC850048E97B /* PokeDetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeDetailsVC.swift; sourceTree = "<group>"; };
 		D5DB3AA91E5FC40F00971C5C /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -153,6 +155,7 @@
 			children = (
 				D506BFEB1E5263D80030870B /* PokeSpotter-Bridging-Header.h */,
 				D506C00F1E5FBFB70030870B /* Constants.swift */,
+				D522E7771E70C3C4007E8FA0 /* music.mp3 */,
 				D522E7751E70B247007E8FA0 /* pokemon.csv */,
 			);
 			name = Resources;
@@ -272,6 +275,7 @@
 			files = (
 				D506BFC71E525B0D0030870B /* LaunchScreen.storyboard in Resources */,
 				D506BFD31E525D590030870B /* GoogleService-Info.plist in Resources */,
+				D522E7781E70C3C4007E8FA0 /* music.mp3 in Resources */,
 				D506BFC41E525B0D0030870B /* Assets.xcassets in Resources */,
 				D506BFC21E525B0D0030870B /* Main.storyboard in Resources */,
 				D522E7761E70B247007E8FA0 /* pokemon.csv in Resources */,
