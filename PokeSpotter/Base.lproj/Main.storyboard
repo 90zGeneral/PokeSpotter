@@ -60,7 +60,7 @@
                                 </constraints>
                                 <state key="normal" image="search_btn"/>
                                 <connections>
-                                    <segue destination="i8R-WA-2Ro" kind="presentation" identifier="PokeCell" id="rgg-8v-79t"/>
+                                    <segue destination="i8R-WA-2Ro" kind="show" id="Dmg-YK-sRM"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -551,11 +551,12 @@
                     <connections>
                         <outlet property="collection" destination="lLS-FA-Dem" id="w1h-2K-T8M"/>
                         <outlet property="searchBar" destination="WxK-3n-iwF" id="zjg-eA-nEd"/>
+                        <segue destination="ukL-pY-mrc" kind="show" identifier="PokeCell" id="0gq-ef-bfD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aY9-vh-VaU" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34" y="740"/>
+            <point key="canvasLocation" x="122" y="765"/>
         </scene>
     </scenes>
     <resources>
@@ -567,4 +568,7 @@
         <image name="pokeball" width="97" height="96"/>
         <image name="search_btn" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="lKD-q4-kWi"/>
+    </inferredMetricsTieBreakers>
 </document>

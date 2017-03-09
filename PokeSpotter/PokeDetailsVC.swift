@@ -25,9 +25,9 @@ class PokeDetailsVC: UIViewController {
         super.viewDidLoad()
         
         //Assignment
-        pokeName.text = pokemonAnn.title
+        pokeName.text = pokemon.title
 
-        let img = UIImage(named: "\(pokemonAnn.pokemonID)")
+        let img = UIImage(named: "\(pokemon.pokemonId)")
         mainImg.image = img
         
     }

@@ -154,7 +154,7 @@ class SearchVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         }
         
         //Perform the segue based on the selected pokemon
-        performSegue(withIdentifier: "PokeDetailsVC", sender: poke)
+        performSegue(withIdentifier: "PokeCell", sender: poke)
         
     }
     

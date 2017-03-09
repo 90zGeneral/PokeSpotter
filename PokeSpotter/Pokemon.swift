@@ -26,6 +26,7 @@ class Pokemon {
     fileprivate var _evolutionID: String!
     fileprivate var _evolutionLvl: String!
     fileprivate var _pokemonURL: String!
+    var title: String?
     
     
     //Getters
@@ -135,8 +136,10 @@ class Pokemon {
     
     //Initializer
     init(name: String, pokemonId: Int) {
-        self._name = name
+        self._name = name.capitalized
         self._pokemonId = pokemonId
+        self.title = self._name
+        
         
         //API URL based on the pokemon's ID number
         self._pokemonURL = "\(URL_BASE)\(URL_POKEMON)\(self.pokemonId)"
