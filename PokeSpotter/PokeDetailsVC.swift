@@ -17,6 +17,9 @@ class PokeDetailsVC: UIViewController {
     //New instance of PokeAnnotation without initialization
     var pokemonAnn: PokeAnnotation!
     
+    //
+    var pokemon: Pokemon!
+    
     //ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()

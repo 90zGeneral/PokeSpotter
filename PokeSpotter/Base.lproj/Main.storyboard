@@ -60,7 +60,7 @@
                                 </constraints>
                                 <state key="normal" image="search_btn"/>
                                 <connections>
-                                    <segue destination="i8R-WA-2Ro" kind="presentation" id="rgg-8v-79t"/>
+                                    <segue destination="i8R-WA-2Ro" kind="presentation" identifier="PokeCell" id="rgg-8v-79t"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -398,10 +398,10 @@
             </objects>
             <point key="canvasLocation" x="756" y="35"/>
         </scene>
-        <!--MainVC-->
+        <!--SearchVC-->
         <scene sceneID="R6z-MA-dvc">
             <objects>
-                <viewController id="i8R-WA-2Ro" customClass="MainVC" customModule="PokeSpotter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="i8R-WA-2Ro" customClass="SearchVC" customModule="PokeSpotter" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rnG-Fg-8pc"/>
                         <viewControllerLayoutGuide type="bottom" id="H98-tS-dWG"/>
