@@ -224,5 +224,12 @@ class SearchVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         
     }
     
+    //To go back to the mainVC
+    @IBAction func goBackToMap(_ sender: Any) {
+        
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
 }
 

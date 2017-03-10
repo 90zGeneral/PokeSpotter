@@ -500,6 +500,9 @@
                                             <constraint firstAttribute="width" constant="35" id="nDg-7G-vPo"/>
                                         </constraints>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="goBackToMap:" destination="i8R-WA-2Ro" eventType="touchUpInside" id="mTt-C3-cya"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.50196081400000003" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -569,6 +572,6 @@
         <image name="search_btn" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="lKD-q4-kWi"/>
+        <segue reference="0gq-ef-bfD"/>
     </inferredMetricsTieBreakers>
 </document>

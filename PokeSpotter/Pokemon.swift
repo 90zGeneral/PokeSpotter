@@ -136,7 +136,7 @@ class Pokemon {
     
     //Initializer
     init(name: String, pokemonId: Int) {
-        self._name = name.capitalized
+        self._name = name
         self._pokemonId = pokemonId
         self.title = self._name
         
