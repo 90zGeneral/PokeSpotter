@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 
-class Pokemon {
+class Pokemon: NSObject, MKAnnotation {
     
     //Private properties
     fileprivate var _name: String!
