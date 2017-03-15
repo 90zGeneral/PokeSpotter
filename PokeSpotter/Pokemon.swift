@@ -10,7 +10,7 @@ import Foundation
 import Alamofire
 
 
-class Pokemon: NSObject, MKAnnotation {
+class Pokemon {
     
     //Private properties
     fileprivate var _name: String!
@@ -26,7 +26,6 @@ class Pokemon: NSObject, MKAnnotation {
     fileprivate var _evolutionID: String!
     fileprivate var _evolutionLvl: String!
     fileprivate var _pokemonURL: String!
-    fileprivate var _title: String!
     
     
     //Getters
@@ -134,20 +133,10 @@ class Pokemon: NSObject, MKAnnotation {
         return _pokemonURL
     }
     
-    var title: String {
-        if _title == nil {
-            _title = ""
-        }
-        
-        return _title
-    }
-    
     //Initializer
     init(name: String, pokemonId: Int) {
         self._name = name
         self._pokemonId = pokemonId
-        self._title = self._name
-        
         
         //API URL based on the pokemon's ID number
         self._pokemonURL = "\(URL_BASE)\(URL_POKEMON)\(self.pokemonId)"

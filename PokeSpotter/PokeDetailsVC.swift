@@ -25,7 +25,7 @@ class PokeDetailsVC: UIViewController {
         super.viewDidLoad()
         
         //Assignment
-        pokeName.text = pokemon.title.capitalized
+        pokeName.text = pokemon.name.capitalized
 
         let img = UIImage(named: "\(pokemon.pokemonId)")
         mainImg.image = img
