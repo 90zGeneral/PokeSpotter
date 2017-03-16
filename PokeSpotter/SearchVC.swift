@@ -9,13 +9,13 @@
 import UIKit
 import AVFoundation
 
+//Global array of Pokemons
+var pokemons = [Pokemon]()
+
 class SearchVC: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
 
     @IBOutlet weak var collection: UICollectionView!
     @IBOutlet weak var searchBar: UISearchBar!
-    
-    //Array of Pokemons
-    var pokemons = [Pokemon]()
     
     //Filtered array of Pokemon for the search bar AND the current status of search
     var filteredPokemons = [Pokemon]()
@@ -32,14 +32,28 @@ class SearchVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
         collection.dataSource = self
         searchBar.delegate = self
         
-        //Call functions
-        parsePokemonCSV()
+        //Call function
         audioSetup()
         
         //Change the search button text in the keyboard to say "Done"
         searchBar.returnKeyType = UIReturnKeyType.done
         
 
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        //To prevent duplicate insertions into the array
+        if pokemons.count < 1 {
+            
+            //Call function
+            parsePokemonCSV()
+            print(pokemons.count)
+            
+        }else {
+            
+            print(pokemons.count)
+        }
     }
     
     //Set up the audio player

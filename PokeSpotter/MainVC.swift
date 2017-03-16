@@ -25,6 +25,9 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     var geoFire: GeoFire!
     var geoFireRef: FIRDatabaseReference!
     
+    //Reference to SearchVC
+    var searchVC = SearchVC()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -44,6 +47,18 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         
         //Function call everytime the view appears
         userLocationAuthStatus()
+        
+        //To prevent duplicate insertions into the array
+        if pokemons.count < 1 {
+            
+            //Call the parsePokemonCSV method in SearchVC
+            searchVC.parsePokemonCSV()
+            print(pokemons.count)
+            
+        }else {
+            
+            print(pokemons.count)
+        }
     }
     
     //Ask the user's permission to access their location

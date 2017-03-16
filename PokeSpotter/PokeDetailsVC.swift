@@ -14,21 +14,28 @@ class PokeDetailsVC: UIViewController {
     @IBOutlet weak var pokeName: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
     
-    //New instance of PokeAnnotation without initialization
+    //Variables of type PokeAnnotation and Pokemon
     var pokemonAnn: PokeAnnotation!
-    
-    //
     var pokemon: Pokemon!
     
     //ViewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Check where the segue is coming from
+        if pokemon != nil {
         //Assignment
         pokeName.text = pokemon.name.capitalized
 
         let img = UIImage(named: "\(pokemon.pokemonId)")
         mainImg.image = img
+            
+        }else {
+            pokeName.text = pokemonAnn.pokemonName.uppercased()
+            
+            let img = UIImage(named: "\(pokemonAnn.pokemonID)")
+            mainImg.image = img
+        }
         
     }
     
