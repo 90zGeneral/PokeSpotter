@@ -226,8 +226,8 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         //Create a location for random pokemon
         let loc = CLLocation(latitude: mapView.centerCoordinate.latitude, longitude: mapView.centerCoordinate.longitude)
         
-        //Random pokemon ID generator between 1 and 151 inclusive of both 1 & 151
-        let rand = arc4random_uniform(151) + 1
+        //Random pokemon ID generator between 1 and 151 inclusive of both 1 & 718
+        let rand = arc4random_uniform(718) + 1
         
         //Call spottedPokemon using the values above
         spottedPokemon(forLocation: loc, withPokemon: Int(rand))
