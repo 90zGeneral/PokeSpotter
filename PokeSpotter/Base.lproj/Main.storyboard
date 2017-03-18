@@ -390,8 +390,21 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="baseAttackLbl" destination="NYi-Br-OSE" id="g7p-r6-sQb"/>
+                        <outlet property="currentEvolutionImg" destination="jRT-dg-kA8" id="9rY-nF-Cgd"/>
+                        <outlet property="defenseLbl" destination="wjm-NL-rzQ" id="y8F-eB-DWh"/>
+                        <outlet property="descriptionLbl" destination="ag7-Oc-7wy" id="jMI-c3-Y1g"/>
+                        <outlet property="evolStackView" destination="Ial-Wh-AWc" id="jZn-yO-eMg"/>
+                        <outlet property="evolutionLbl" destination="nRp-hi-wgu" id="JZ9-Nt-TWh"/>
+                        <outlet property="heightLbl" destination="UxT-cG-dml" id="bzO-Af-19d"/>
+                        <outlet property="laterLbl" destination="yh5-Cq-DSm" id="TRz-uQ-pP5"/>
                         <outlet property="mainImg" destination="xnK-WK-Z9y" id="xYj-1m-R6k"/>
+                        <outlet property="nextEvolutionImg" destination="MrT-Oe-SoO" id="1us-tN-DXw"/>
+                        <outlet property="nowLbl" destination="FhX-7z-ekz" id="PSg-b5-Ql0"/>
                         <outlet property="pokeName" destination="IKK-eR-TMh" id="gYK-K1-yqn"/>
+                        <outlet property="pokemonIDLbl" destination="vCU-K0-2Ze" id="BJZ-Mx-Ndv"/>
+                        <outlet property="typeLbl" destination="Ood-a4-fzf" id="1oe-JW-jGS"/>
+                        <outlet property="weightLbl" destination="boD-ad-eqp" id="1Bd-D8-QfL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ez-ee-7UB" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -229,7 +229,7 @@ class SearchVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
     
     //Remove the keyboard when user taps anywhere at the top of the screen where the Title is.
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        self.view.endEditing(true)
+        view.endEditing(true)
     }
     
     //Remove keyboard when the cancel button is tapped
