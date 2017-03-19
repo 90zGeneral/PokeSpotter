@@ -217,6 +217,7 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         let myAnno = sender as? PokeAnnotation
         
         destination?.pokemonAnn = myAnno
+        destination?.pokemon = myAnno?.pokeDetailsVC.pokemon
         
     }
     

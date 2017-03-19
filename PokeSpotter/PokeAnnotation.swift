@@ -15,6 +15,7 @@ class PokeAnnotation: NSObject, MKAnnotation {
     var pokemonID: Int  //This cannot be optional. It must only hold an integer.
     var pokemonName: String
     var title: String?
+    var pokeDetailsVC = PokeDetailsVC()
     
     init(coordinate: CLLocationCoordinate2D, pokemonID: Int) {
         self.coordinate = coordinate
@@ -22,5 +23,7 @@ class PokeAnnotation: NSObject, MKAnnotation {
         let pokemonNow = pokemons[pokemonID - 1]
         self.pokemonName = pokemonNow.name.capitalized
         self.title = self.pokemonName
+        
+        pokeDetailsVC.pokemon = pokemonNow
     }
 }
