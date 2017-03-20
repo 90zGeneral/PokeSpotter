@@ -254,7 +254,7 @@
 				TargetAttributes = {
 					D506BFB81E525B0D0030870B = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = 3983Y6QL49;
+						DevelopmentTeam = QG9HYMA775;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -483,8 +483,9 @@
 			baseConfigurationReference = 9A674E48415960EDBE636969 /* Pods-PokeSpotter.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3983Y6QL49;
+				DEVELOPMENT_TEAM = QG9HYMA775;
 				INFOPLIST_FILE = PokeSpotter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.italytes.PokeSpotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -498,8 +499,9 @@
 			baseConfigurationReference = 05D919C754700F36595C129B /* Pods-PokeSpotter.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 3983Y6QL49;
+				DEVELOPMENT_TEAM = QG9HYMA775;
 				INFOPLIST_FILE = PokeSpotter/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.italytes.PokeSpotter;
 				PRODUCT_NAME = "$(TARGET_NAME)";
