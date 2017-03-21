@@ -103,7 +103,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Charmeleon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IKK-eR-TMh">
-                                        <rect key="frame" x="60" y="25" width="200" height="40"/>
+                                        <rect key="frame" x="61" y="25" width="200" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="OrX-XF-HNF"/>
                                             <constraint firstAttribute="height" constant="40" id="ryv-h6-FuN"/>
@@ -485,10 +485,10 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SmL-2Z-rp2">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="65"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PokeFacts" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbt-zk-JbJ">
-                                        <rect key="frame" x="90" y="25" width="140" height="40"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PokeSpotter" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jbt-zk-JbJ">
+                                        <rect key="frame" x="85" y="25" width="150" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="140" id="Kwf-J4-sia"/>
+                                            <constraint firstAttribute="width" constant="150" id="Kwf-J4-sia"/>
                                             <constraint firstAttribute="height" constant="40" id="w8Y-El-meA"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" name="PokemonSolidNormal" family="Pokemon Solid" pointSize="25"/>
