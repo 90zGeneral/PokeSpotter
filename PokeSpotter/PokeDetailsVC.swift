@@ -92,7 +92,7 @@ class PokeDetailsVC: UIViewController {
             nowLbl.isHidden = false
             laterLbl.isHidden = false
             currentEvolutionImg.isHidden = false
-            currentEvolutionImg.image = UIImage(named: "\(pokemon.pokemonId)")
+            currentEvolutionImg.image = UIImage(named: "\(pokemon.pokeRevertId)")
             nextEvolutionImg.isHidden = false
             nextEvolutionImg.image = UIImage(named: pokemon.evolutionID)
             evolutionLbl.text = "Next Evolution: \(pokemon.evolutionName) - LVL: \(pokemon.evolutionLvl)"
