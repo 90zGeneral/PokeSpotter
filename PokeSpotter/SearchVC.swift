@@ -98,10 +98,9 @@ class SearchVC: UIViewController, UICollectionViewDelegate, UICollectionViewData
                 //Grab the name and id of each pokemon in the rows array
                 let pokeName = row["identifier"]!
                 let pokeId = Int(row["id"]!)!
-                let revertId = Int(row["revert_id"]!)!
                 
                 //Pass the name and id into a new instance of the Pokemon class
-                let eachPoke = Pokemon(name: pokeName, pokemonId: pokeId, pokeRevertId: revertId)
+                let eachPoke = Pokemon(name: pokeName, pokemonId: pokeId)
                 
                 //Append each new instance of Pokemon class to the pokemons array
                 pokemons.append(eachPoke)
