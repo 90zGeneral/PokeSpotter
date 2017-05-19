@@ -13,8 +13,6 @@ class PokeDetailsVC: UIViewController {
     //Outlets
     @IBOutlet weak var pokeName: UILabel!
     @IBOutlet weak var mainImg: UIImageView!
-    
-
     @IBOutlet weak var descriptionLbl: UILabel!
     @IBOutlet weak var typeLbl: UILabel!
     @IBOutlet weak var defenseLbl: UILabel!
@@ -92,7 +90,7 @@ class PokeDetailsVC: UIViewController {
             nowLbl.isHidden = false
             laterLbl.isHidden = false
             currentEvolutionImg.isHidden = false
-            currentEvolutionImg.image = UIImage(named: "\(pokemon.pokeRevertId)")
+            currentEvolutionImg.image = UIImage(named: "\(pokemon.pokemonId)")
             nextEvolutionImg.isHidden = false
             nextEvolutionImg.image = UIImage(named: pokemon.evolutionID)
             evolutionLbl.text = "Next Evolution: \(pokemon.evolutionName) - LVL: \(pokemon.evolutionLvl)"
