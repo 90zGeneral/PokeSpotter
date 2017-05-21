@@ -41,8 +41,6 @@ class MainVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
         //Reference to the Firebase Database and initialize geoFire
         geoFireRef = FIRDatabase.database().reference()
         geoFire = GeoFire(firebaseRef: geoFireRef)
-        
-        pokeBallView.isHidden = true
 
     }
     
